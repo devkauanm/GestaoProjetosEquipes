@@ -1,0 +1,5 @@
+db.host=SEU_HOST
+db.porta=SUA_PORTA
+db.banco=SEU_DB
+db.usuario=SEU_USUARIO
+db.senha=SUA_SENHA_AQUI
