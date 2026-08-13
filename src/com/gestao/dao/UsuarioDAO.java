@@ -172,4 +172,16 @@ public class UsuarioDAO {
                 u.setCpf(rs.getString("cpf"));
                 u.setEmail(rs.getString("email"));
                 u.setCargo(rs.getString("cargo"));
-                u.setLogin(rs.getString("log
+                u.setLogin(rs.getString("login"));
+                u.setSenha(rs.getString("senha"));
+                u.setPerfil(rs.getString("perfil"));
+                return u;
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao autenticar: " + e.getMessage());
+        } finally {
+            ConexaoBanco.fecharConexao(conexao);
+        }
+        return null; // retorna null se login ou senha estiverem errados
+    }
+}
